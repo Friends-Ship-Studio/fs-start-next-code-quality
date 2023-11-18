@@ -7,17 +7,13 @@ const buildFormatCommand = (filenames) =>
     .map((f) => path.relative(process.cwd(), f))
     .join(' ')}`
 
-const buildEslintCommand = (filenames) =>
+const buildLintCommand = (filenames) =>
   `next lint --fix --file ${filenames
     .map((f) => path.relative(process.cwd(), f))
     .join(' --file ')}`
 
 module.exports = {
-  '*.{ts,tsx}': [
-    buildTypeScriptCommand,
-    buildFormatCommand,
-    buildEslintCommand,
-  ],
-  '*.{js,jsx,mjs,cjs}': [buildFormatCommand, buildEslintCommand],
+  '*.{ts,tsx}': [buildTypeScriptCommand, buildFormatCommand, buildLintCommand],
+  '*.{js,jsx,mjs,cjs}': [buildFormatCommand, buildLintCommand],
   '*.{json,html,css,md,yml,yaml}': [buildFormatCommand],
 }
