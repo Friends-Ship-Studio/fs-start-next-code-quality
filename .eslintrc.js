@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const fs = require("fs");
 const path = require('path'); 
 
 module.exports = {
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended-type-checked", "next/core-web-vitals"],
   ignorePatterns: [
     // Load .gitignore content as base ESLint ignore patterns
     ...fs.readFileSync(path.join(__dirname, ".gitignore"), "utf8")
@@ -9,5 +12,17 @@ module.exports = {
         .filter(line => line && !line.startsWith("#")),
     // Include any additional ignore patterns here
   ],
-  extends: ["eslint:recommended", "next/core-web-vitals"]
+  overrides: [
+    {
+      extends: ['plugin:@typescript-eslint/disable-type-checked'],
+      files: ['./**/*.js', './**/*.jsx', './**/*.mjs', './**/*.cjs'],
+    },
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: 'tsconfig.eslint.json',
+    tsconfigRootDir: __dirname,
+  },
+  plugins: ['@typescript-eslint'],
+  root: true,
 };
