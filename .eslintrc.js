@@ -1,15 +1,21 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-const fs = require("fs");
-const path = require('path'); 
+const fs = require('fs')
+const path = require('path')
 
 module.exports = {
-  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended-type-checked", "next/core-web-vitals", "prettier"],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    'next/core-web-vitals',
+    'prettier',
+  ],
   ignorePatterns: [
     // Load .gitignore content as base ESLint ignore patterns
-    ...fs.readFileSync(path.join(__dirname, ".gitignore"), "utf8")
-        .split("\n")
-        .filter(line => line && !line.startsWith("#")),
+    ...fs
+      .readFileSync(path.join(__dirname, '.gitignore'), 'utf8')
+      .split('\n')
+      .filter((line) => line && !line.startsWith('#')),
     // Include any additional ignore patterns here
   ],
   overrides: [
@@ -29,4 +35,4 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   root: true,
-};
+}
