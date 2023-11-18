@@ -14,6 +14,7 @@ module.exports = {
   ],
   overrides: [
     {
+      // Disable type-checking rules for JavaScript files
       extends: ['plugin:@typescript-eslint/disable-type-checked'],
       files: ['./**/*.js', './**/*.jsx', './**/*.mjs', './**/*.cjs'],
     },
