@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require('path'); 
 
 module.exports = {
-  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended-type-checked", "next/core-web-vitals"],
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended-type-checked", "next/core-web-vitals", "prettier"],
   ignorePatterns: [
     // Load .gitignore content as base ESLint ignore patterns
     ...fs.readFileSync(path.join(__dirname, ".gitignore"), "utf8")
