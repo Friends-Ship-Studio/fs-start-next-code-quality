@@ -1,8 +1,13 @@
 ## About
 
-This is a starter template for new [Next 14](https://nextjs.org/) projects, with a lightly opinionated setup to support better code quality and maintenance.
+This is a starter template for new [Next 14](https://nextjs.org/) projects, with a lightly opinionated setup to support better code quality and maintenance:
 
-It includes basic type safety, linting, and formatting — and suggestions for further additions, below.
+- Type safety with TypeScript
+- Linting with ESLint
+- Formatting with Prettier
+- Automated pre-commit hooks with Husky and lint-staged
+
+It is intentionally very basic, so it can be used and built upon within any team or project context.
 
 ## Instructions
 
@@ -58,13 +63,13 @@ This project was bootstrapped with [`create-next-app`](https://github.com/vercel
 
 ### Type safety: TypeScript
 
-[TypeScript](https://www.typescriptlang.org/) is set up using the default [Next 14 configuration](https://nextjs.org/docs/app/building-your-application/configuring/typescript) and `strict mode` on.
+[TypeScript](https://www.typescriptlang.org/) uses the default [Next 14 configuration](https://nextjs.org/docs/app/building-your-application/configuring/typescript) and `strict mode` on.
 
 ### Linting: ESLint
 
 [ESLint](https://eslint.org/) is set up for code **linting**, configured with the following:
 
-- [eslint:recommended](https://eslint.org/docs/latest/use/configure/configuration-files#using-eslintrecommended) rule set
+- [`eslint:recommended`](https://eslint.org/docs/latest/use/configure/configuration-files#using-eslintrecommended) rule set
 - [typescript-eslint](https://typescript-eslint.io/) parser, plugin, and [`recommended-type-checked`](https://typescript-eslint.io/linting/typed-linting) rule set
 - [Next's default ESLint setup](https://nextjs.org/docs/app/building-your-application/configuring/eslint) using their [`next/core-web-vitals`](https://nextjs.org/docs/app/building-your-application/configuring/eslint#core-web-vitals) rule set
 - [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) to turn off rules that could conflict with [Prettier](https://prettier.io/)
@@ -78,7 +83,7 @@ This project was bootstrapped with [`create-next-app`](https://github.com/vercel
 
 ### Pre-commit hooks: Husky + lint-staged
 
-[Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) are used for a pre-commit hook that checks / enforces the TypeScript, ESLint, and Prettier configurations for any attempted git commits. Commits will fail if there are any TypeScript or ESLint errors that can't be automatically fixed on staged files. Prettier formatting corrections will be applied automatically to supported files as well.
+[Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) provide a pre-commit hook that checks / enforces the TypeScript, ESLint, and Prettier configurations for any attempted git commits. Commits will fail if there are any TypeScript or ESLint errors that can't be automatically fixed on staged files. Prettier formatting corrections will be applied automatically to supported files as well.
 
 ## Suggested additions
 
