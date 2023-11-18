@@ -9,7 +9,8 @@
     "lint:check": "next lint",
     "lint:fix": "next lint --fix",
     "format:check": "prettier --check .",
-    "format:fix": "prettier --write ."
+    "format:fix": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "14.0.3",
@@ -25,6 +26,8 @@
     "eslint": "^8.54.0",
     "eslint-config-next": "14.0.3",
     "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.1.0",
     "prettier": "3.1.0",
     "typescript": "^5.2.2"
   }
