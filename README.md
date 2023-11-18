@@ -1,4 +1,6 @@
-This is a starter template for new Next projects, with a lightly opinionated setup to support better code quality and maintenance.
+## About
+
+This is a starter template for new [Next 14](https://nextjs.org/) projects, with a lightly opinionated setup to support better code quality and maintenance.
 
 It includes basic type safety, linting, and formatting — and suggestions for further additions, below.
 
@@ -32,7 +34,7 @@ Visit [http://localhost:3000](http://localhost:3000) with your browser to open t
 
 ## Create Next App configuration
 
-This is a [Next.js](https://nextjs.org/) (v14) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), using the following configuration options:
+This project was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), using Next 14 and the following configuration options:
 
 ```
 ✔ Would you like to use TypeScript? … Yes
@@ -45,7 +47,7 @@ This is a [Next.js](https://nextjs.org/) (v14) project bootstrapped with [`creat
 
 ## Package management: pnpm
 
-Using [`pnpm`](https://pnpm.io/) is very similar to `npm`, but with a different command syntax. Here are some of the most common `npm` commands, and the `pnpm` equivalents:
+[`pnpm`](https://pnpm.io/) is the package manager. Using [`pnpm`](https://pnpm.io/) is very similar to `npm`, but with a different command syntax. Here are some of the most common `npm` commands, and the `pnpm` equivalents:
 
 - `npm install` → `pnpm install`
 - `npm i <pkg>` → `pnpm add <pkg>`
@@ -56,7 +58,7 @@ Using [`pnpm`](https://pnpm.io/) is very similar to `npm`, but with a different 
 
 ### Type safety: TypeScript
 
-This is a [TypeScript](https://www.typescriptlang.org/) project, using the default [Next 14 configuration](https://nextjs.org/docs/app/building-your-application/configuring/typescript) and `strict mode` on.
+[TypeScript](https://www.typescriptlang.org/) is set up using the default [Next 14 configuration](https://nextjs.org/docs/app/building-your-application/configuring/typescript) and `strict mode` on.
 
 ### Linting: ESLint
 
@@ -80,7 +82,9 @@ This is a [TypeScript](https://www.typescriptlang.org/) project, using the defau
 
 ## Suggested additions
 
-The included tools and configurations are meant to provide a solid base level of code quality and maintanence infrastructure that can fit any new Next project. As such, it is only lightly opinionated, and there are further additions that should be considered based on the unique team needs and preferences for individual projects. Suggestions include:
+The included tools and configurations are meant to provide a solid base level of code quality and maintanence infrastructure that can fit any new Next project. As such, it is only lightly opinionated, and there are further additions that should be considered based on the unique team needs and preferences for individual projects.
+
+Suggestions include:
 
 - [Husky](https://typicode.github.io/husky/#/) and [commitlint](https://commitlint.js.org/#/) for a commit-msg hook that enforces commit messages using the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
 - [Jest](https://jestjs.io/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) for unit testing.
