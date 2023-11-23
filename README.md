@@ -21,6 +21,7 @@ Create a new project using this [GitHub template](https://github.com/Friends-Shi
 
 ```bash
 pnpm dlx degit Friends-Ship-Studio/fs-start-next-code-quality my-new-app
+cd my-new-app
 ```
 
 Install all dependencies for this project:
